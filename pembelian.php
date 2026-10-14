@@ -1,0 +1,1 @@
+<?php require 'beli_admin.php'; ?>

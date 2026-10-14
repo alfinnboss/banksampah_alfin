@@ -1,0 +1,154 @@
+/* ==========================================
+   RESET & VARIABEL TEMA
+   ========================================== */
+:root {
+    --bg-dark: #0b1021;          /* Biru sangat gelap untuk latar belakang utama */
+    --card-bg: #131b30;          /* Biru navy untuk panel/card/form/tabel */
+    --card-border: #1a2542;      /* Border biru medium */
+    --primary-gold: #ffd700;     /* Emas untuk aksen, judul, dan tombol */
+    --primary-gold-hover: #ffe033;
+    --text-light: #ffffff;       /* Teks putih utama */
+    --text-muted: #a0aec0;       /* Teks abu-abu terang */
+    --input-bg: #1a2542;         /* Background input/select */
+    --input-border: #2e3e68;     /* Border input */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================
+   CONTAINER & PANEL / CARD
+   ========================================== */
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.panel {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 25px 30px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.panel.narrow {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   TYPOGRAPHY
+   ========================================== */
+h1, h2, h3 {
+    color: var(--primary-gold);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.muted {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* ==========================================
+   FORM & INPUTS
+   ========================================== */
+form label {
+    display: block;
+    color: var(--primary-gold);
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 10px 14px;
+    background-color: var(--input-bg);
+    color: var(--text-light);
+    border: 1px solid var(--input-border);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+form input[readonly] {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    border-color: #1e293b;
+    cursor: not-allowed;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form select:focus {
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 6px rgba(255, 215, 0, 0.4);
+}
+
+/* ==========================================
+   BUTTONS
+   ========================================== */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+}
+
+.btn.primary {
+    background: linear-gradient(180deg, #ffd700 0%, #cca100 100%);
+    color: #0b1021;
+}
+
+.btn.primary:hover {
+    background: linear-gradient(180deg, #ffe033 0%, #e6b800 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+}
+
+.btn.full {
+    width: 100%;
+    margin-top: 25px;
+}
+
+/* ==========================================
+   NOTIFIKASI / ALERTS
+   ========================================== */
+.alert {
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    background-color: rgba(16, 185, 129, 0.15);
+    border: 1px solid #10b981;
+    color: #34d399;
+}
+
+.alert.danger {
+    background-color: rgba(239, 68, 68, 0.15);
+    border: 1px solid #ef4444;
+    color: #f87171;
+}
